@@ -8,6 +8,7 @@ class SelectPage:
     courses_xpath="//select[@id='searchby-course']"
     coursetypes_xpath="//select[@id='searchby-course-specialization']"
     searchbtn_xpath="//button[normalize-space()='Search Now']"
+
     def __init__(self, driver):
         self.driver = driver
 
@@ -28,3 +29,5 @@ class SelectPage:
 
     def clickSearchbtn(self):
         WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, self.searchbtn_xpath))).click()
+
+    

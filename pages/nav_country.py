@@ -23,7 +23,7 @@ class Nav_Country:
         act.move_to_element(c).perform()
 
     def select_specificcountry(self,country):
-        specific_country=WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.XPATH,f"//a[@class='dropdown-item'][normalize-space()='Study in {country}']")))
+        specific_country=WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.XPATH,f"//a[contains(@class ,'dropdown-item')][normalize-space()={country}]")))
         specific_country.click()
 
     def selectcost(self):

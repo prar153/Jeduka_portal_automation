@@ -10,6 +10,11 @@ class TestNav_Courses:
         self.driver.maximize_window()
         self.SCC=Nav_Courses(self.driver)
         self.SCC.hover_course()
+        # self.SCC.select_viewall("information-technology")
         self.SCC.select_course('Paramedical/Nursing Studies Colleges')
-        self.SCC.view_courses("university-of-washington")
+        self.SCC.apply_now("university-of-washington")
+        self.SCC.afterapply("Prarthana Manandhar","manandharprarthana@gmail.com","9876545696","Nepal","Bagmati","Kathmandu","Australia","Information Technology (IT)","IT")
+
+        # self.SCC.view_courses("university-of-washington")
+        # self.SCC.click_next()
 

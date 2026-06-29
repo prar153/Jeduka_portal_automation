@@ -10,5 +10,5 @@ class TestNav_Country:
         self.SC.click_country()
         self.SC.select_specificcountry("Canada")
         self.SC.select_masters()
-        self.SC.select_scholarship()
+        self.SC.select_scholarship("united-world")
         self.SC.select_faq()

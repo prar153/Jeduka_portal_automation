@@ -43,11 +43,15 @@ class Nav_Country:
         svisa=WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.XPATH,self.studentvisa_xpath)))
         svisa.click()
 
-    def select_scholarship(self):
+    def select_scholarship(self,col):
         sch = WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, self.scholarship_xpath)))
         sch.click()
+
+        dd=WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH,f"// a[ @ href = 'https://www.jeduka.com/scholarship/study-in-canada/{col}-college-scholarships'][normalize-space() = 'Detailed Description']")))
+        dd.click()
         self.driver.back()
+
 
     def select_intake(self):
         intakes = WebDriverWait(self.driver, 10).until(
